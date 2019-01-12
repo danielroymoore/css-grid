@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Grid Layout</title>
+        <link
+            href="https://fonts.googleapis.com/css?family=Open+Sans"
+            rel="stylesheet"
+        />
+        <script src="https://unpkg.com/feather-icons"></script>
+    </head>
+    <body>
+        <div class="grid-wrapper">
+            <div class="side-nav">Side Nav</div>
+            <div class="header">
+                <span>Daniel</span><i data-feather="user"></i>
+            </div>
+            <div class="content"><div>Some Content</div></div>
+        </div>
+
+        <script>
+            feather.replace();
+        </script>
+    </body>
+
+    <style>
+        html {
+            font-size: 10px;
+            font-family: "Open Sans", sans-serif;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .grid-wrapper {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 20% 1fr;
+            grid-template-rows: 5rem 1fr;
+            font-size: 2.5rem;
+        }
+
+        .side-nav {
+            grid-column: 1/2;
+            grid-row: 1/4;
+            border-right: 1px solid rgba(0, 0, 0, 0.15);
+        }
+
+        .header {
+            grid-column: 2/3;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 1rem 2rem;
+            font-size: 1.5rem;
+        }
+
+        .content {
+            grid-column: 2/3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 5rem;
+            box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.06),
+                0 4px 5px 0 rgba(0, 0, 0, 0.06),
+                0 1px 10px 0 rgba(0, 0, 0, 0.08);
+        }
+    </style>
+</html>
