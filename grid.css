@@ -8,19 +8,33 @@ body {
   margin: 0;
 }
 
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+input[type="text"] {
+  padding: 0.5rem;
+  width: 100%;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
 .grid-wrapper {
   height: 100vh;
   display: grid;
   grid-template-columns: 20% 1fr;
   grid-template-rows: 5rem 1fr;
-  font-size: 2.5rem;
 }
 
 .side-nav {
   display: flex;
   flex-flow: column;
   grid-column: 1/2;
-  grid-row: 1/4;
+  grid-row: 1/3;
   background: #fcfcfc;
   border-right: 1px solid rgba(0, 0, 0, 0.15);
 }
@@ -34,27 +48,34 @@ body {
   align-items: center;
   text-transform: uppercase;
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  cursor: pointer;
 }
 
 .side-nav > .menu {
   list-style: none;
-  font-size: 2rem;
+  font-size: 1.5rem;
   padding: 0;
+  margin: 0;
 }
 
 .menu > li {
-  padding: 0.5rem 1rem;
+  padding: 1rem;
   transition: 0.3s;
+  text-align: center;
   cursor: pointer;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.menu > li:first-child {
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 .menu > li:hover {
   background: rgba(0, 0, 0, 0.15);
-  font-size: 2.1rem;
+  font-size: 2rem;
 }
 
 .menu > .active {
-  font-size: 2.1rem;
   background: rgba(0, 187, 212, 0.15);
 }
 
@@ -67,6 +88,11 @@ body {
   border: none;
   padding: 1.5rem;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.logout:hover {
+  background: rgba(0, 0, 0, 0.25);
 }
 
 .header {
@@ -81,10 +107,34 @@ body {
 
 .content {
   grid-column: 2/3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin: 5rem;
+  padding: 1rem;
   box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.06),
     0 4px 5px 0 rgba(0, 0, 0, 0.06), 0 1px 10px 0 rgba(0, 0, 0, 0.08);
+}
+
+table {
+  width: 100%;
+  font-size: 1.5rem;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+thead {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+th,
+td {
+  text-align: left;
+  padding: 1rem;
+}
+
+tr {
+  transition: 0.3s;
+}
+
+tr:nth-child(even) {
+  background: rgba(0, 0, 0, 0.15);
 }
